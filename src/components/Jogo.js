@@ -1,4 +1,4 @@
-import { Container } from "./styled/Container.styled";
+import { Game } from "./styled/Game.styled";
 import { Image } from "./styled/Image.styled";
 import { ButtomGame } from "./styled/ButtonGame.styled";
 
@@ -11,6 +11,7 @@ export default function Jogo({
   word,
   setWord,
   mysteryWord,
+  setMysteryWord,
   clickedButtons,
   setClickedButtons,
   renderMysteryWord,
@@ -19,18 +20,21 @@ export default function Jogo({
 }) {
   function renderWord() {
     setGame(false);
+    clickedButtons.length=0;
     setClickedButtons([]);
     setNumerError(0);
     word = words[Math.floor(Math.random() * words.length)];
     setWord(word);
+    mysteryWord=""
+    setMysteryWord(renderMysteryWord(clickedButtons, word))
     setGameEnd("")
+    console.log(word, mysteryWord,clickedButtons)
   }
-  mysteryWord = renderMysteryWord(clickedButtons);
+  console.log(word, mysteryWord,clickedButtons)
   return (
-    <Container gameEnd={gameEnd}>
+    <Game gameEnd={gameEnd}>
       <Image test="game-image" src={images[numberError]} />
       <div>
-        {console.log(word, mysteryWord, gameEnd)}
         <ButtomGame data-test="choose-word"
           onClick={() => {
             renderWord();
@@ -40,6 +44,6 @@ export default function Jogo({
         </ButtomGame>
         <p data-test="word">{numberError===6 ? word:mysteryWord}</p>
       </div>
-    </Container>
+    </Game>
   );
 }

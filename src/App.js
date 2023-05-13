@@ -18,11 +18,10 @@ function App() {
   let [gameEnd, setGameEnd] = useState("");
 
 
-  function renderMysteryWord(Array) {
-    return word
-      .split("")
+  function renderMysteryWord(Array, temp) {
+    return temp.split("")
       .map((letter) => {
-        return Array.includes(remove(letter)) ? letter : " _";
+        return Array.includes(remove(letter)) ? letter : "_";
       })
       .join("");
   }
@@ -39,6 +38,7 @@ function App() {
         word={word}
         setWord={setWord}
         mysteryWord={mysteryWord}
+        setMysteryWord={setMysteryWord}
         clickedButtons={clickedButtons}
         setClickedButtons={setClickedButtons}
         renderMysteryWord={renderMysteryWord}
@@ -65,6 +65,7 @@ function App() {
       setGame={setGame}
       statusGame={statusGame}
       setGameEnd={setGameEnd}
+      setMysteryWord={setMysteryWord}
       />
     </>
   );

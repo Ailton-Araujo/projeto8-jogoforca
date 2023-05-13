@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Game = styled.div`
   width: 1050px;
   display: flex;
   justify-content: space-between;
@@ -18,6 +18,7 @@ export const Container = styled.div`
     font-weight: 700;
     font-size: 50px;
     line-height: 68px;
-    color: ${(props) => props.gameEnd || "#000000"};
+    letter-spacing: 8px;
+    color: ${({gameEnd}) => gameEnd || "#000000"};
   }
 `;

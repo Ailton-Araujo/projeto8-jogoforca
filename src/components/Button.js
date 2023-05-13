@@ -1,5 +1,5 @@
 import { remove } from "remove-accents";
-import { ButtomLetter } from "./styled/ButtonLetter.styled";
+import { ButtonLetter } from "./styled/ButtonLetter.styled";
 
 export default function Buttom({
   letter,
@@ -19,7 +19,7 @@ export default function Buttom({
     setClickedButtons([...clickedButtons, letter]);
     !remove(word).split("").includes(letter) && numberError++;
     setNumerError(numberError);
-    mysteryWord = renderMysteryWord([...clickedButtons, letter]);
+    mysteryWord = renderMysteryWord([...clickedButtons, letter],word);
     setMysteryWord(mysteryWord);
     if (word === mysteryWord) {
       setGame(true);
@@ -32,11 +32,11 @@ export default function Buttom({
   }
 
   return (
-    <ButtomLetter
+    <ButtonLetter
       disabled={statusButton === true ? statusButton : false}
       onClick={guess}
     >
       {letter.toUpperCase()}
-    </ButtomLetter>
+    </ButtonLetter>
   );
 }

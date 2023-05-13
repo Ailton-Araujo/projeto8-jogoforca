@@ -2,19 +2,29 @@ import { useState } from "react";
 import { remove } from "remove-accents";
 import { Guess } from "./styled/Guess.styled";
 
-export default function Chute({word, setNumerError, setGame, statusGame, setGameEnd}) {
+export default function Chute({
+  word,
+  setNumerError,
+  setGame,
+  statusGame,
+  setGameEnd,
+  setMysteryWord,
+}) {
   let [guessWord, setGuessWord] = useState("");
+
   function checkGuess() {
     if (remove(word) === remove(guessWord)) {
       setGame(true);
       setGameEnd("#27AE60");
-      setNumerError(6);
+      setMysteryWord(word)
+      console.log(word)
     } else {
       setGame(true);
       setGameEnd("#FF0000");
       setNumerError(6);
     }
     setGuessWord("");
+    console.log(word)
   }
   return (
     <Guess>

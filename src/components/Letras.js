@@ -1,4 +1,4 @@
-import Buttom from "./Buttom";
+import Button from "./Button";
 
 export default function Letras({
   letters,
@@ -15,7 +15,7 @@ export default function Letras({
   setGameEnd
 }) {
   return letters.map((i) => (
-    <Buttom data-test="letter"
+    <Button data-test="letter"
       letter={i}
       setGame={setGame}
       statusButton={
