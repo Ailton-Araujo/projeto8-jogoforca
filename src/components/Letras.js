@@ -11,7 +11,6 @@ export default function Letras({
   numberError,
   setNumerError,
   word,
-  mysteryWord,
   setMysteryWord,
   setGameEnd,
 }) {
@@ -35,7 +34,6 @@ export default function Letras({
           numberError={numberError}
           setNumerError={setNumerError}
           word={word}
-          mysteryWord={mysteryWord}
           setMysteryWord={setMysteryWord}
           setGameEnd={setGameEnd}
         />

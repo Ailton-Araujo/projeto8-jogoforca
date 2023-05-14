@@ -11,7 +11,6 @@ export default function Buttom({
   numberError,
   setNumerError,
   word,
-  mysteryWord,
   setMysteryWord,
   setGameEnd,
 }) {
@@ -19,9 +18,9 @@ export default function Buttom({
     setClickedButtons([...clickedButtons, letter]);
     !remove(word).split("").includes(letter) && numberError++;
     setNumerError(numberError);
-    mysteryWord = renderMysteryWord([...clickedButtons, letter], word);
-    setMysteryWord(mysteryWord);
-    if (word === mysteryWord) {
+    const tempMysteryWord = renderMysteryWord([...clickedButtons, letter], word);
+    setMysteryWord(tempMysteryWord);
+    if (word === tempMysteryWord) {
       setGame(true);
       setGameEnd("#27AE60");
     }

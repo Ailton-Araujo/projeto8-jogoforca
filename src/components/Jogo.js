@@ -23,9 +23,9 @@ export default function Jogo({
     clickedButtons.length = 0;
     setClickedButtons([]);
     setNumerError(0);
-    word = words[Math.floor(Math.random() * words.length)];
-    setWord(word);
-    setMysteryWord(renderMysteryWord(clickedButtons, word));
+    const tempWord = words[Math.floor(Math.random() * words.length)];
+    setWord(tempWord);
+    setMysteryWord(renderMysteryWord(clickedButtons, tempWord));
     setGameEnd("");
   }
   console.log(word, mysteryWord, clickedButtons);

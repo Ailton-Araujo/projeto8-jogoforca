@@ -10,17 +10,17 @@ import { alfabeto } from "./components/DataLetters";
 import { Images } from "./components/Images";
 
 function App() {
-  let [statusGame, setGame] = useState(true);
-  let [clickedButtons, setClickedButtons] = useState([]);
-  let [numberError, setNumerError] = useState(0);
-  let [word, setWord] = useState("");
-  let [mysteryWord, setMysteryWord] = useState("");
-  let [gameEnd, setGameEnd] = useState("");
+  const [statusGame, setGame] = useState(true);
+  const [clickedButtons, setClickedButtons] = useState([]);
+  const [numberError, setNumerError] = useState(0);
+  const [word, setWord] = useState("");
+  const [mysteryWord, setMysteryWord] = useState("");
+  const [gameEnd, setGameEnd] = useState("");
 
-  function renderMysteryWord(Array, String) {
-    return String.split("")
+  function renderMysteryWord(array, string) {
+    return string.split("")
       .map((letter) => {
-        return Array.includes(remove(letter)) ? letter : "_";
+        return array.includes(remove(letter)) ? letter : "_";
       })
       .join("");
   }
@@ -54,7 +54,6 @@ function App() {
         numberError={numberError}
         setNumerError={setNumerError}
         word={word}
-        mysteryWord={mysteryWord}
         setMysteryWord={setMysteryWord}
         setGameEnd={setGameEnd}
       />

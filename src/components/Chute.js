@@ -10,14 +10,13 @@ export default function Chute({
   setMysteryWord,
   setGameEnd,
 }) {
-  let [guessWord, setGuessWord] = useState("");
+  const [guessWord, setGuessWord] = useState("");
 
   function checkGuess() {
     if (remove(word) === remove(guessWord)) {
       setGame(true);
       setGameEnd("#27AE60");
       setMysteryWord(word);
-      console.log(word);
     } else {
       setGame(true);
       setGameEnd("#FF0000");
@@ -25,7 +24,6 @@ export default function Chute({
       setMysteryWord(word);
     }
     setGuessWord("");
-    console.log(word);
   }
   return (
     <Guess>
