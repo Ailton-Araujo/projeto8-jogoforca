@@ -37,7 +37,6 @@ export default function Letras({
           word={word}
           mysteryWord={mysteryWord}
           setMysteryWord={setMysteryWord}
-          
           setGameEnd={setGameEnd}
         />
       );
