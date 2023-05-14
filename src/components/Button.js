@@ -33,7 +33,7 @@ export default function Buttom({
   }
 
   return (
-    <ButtonLetter
+    <ButtonLetter data-test="letter"
       disabled={statusButton === true ? statusButton : false}
       onClick={guess}
     >
