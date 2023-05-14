@@ -37,6 +37,7 @@ export const Game = styled.div`
     }
     button {
       width: 80%;
+      height: 45px;
     }
   }
 `;

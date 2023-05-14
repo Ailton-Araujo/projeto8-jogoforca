@@ -17,7 +17,6 @@ function App() {
   let [mysteryWord, setMysteryWord] = useState("");
   let [gameEnd, setGameEnd] = useState("");
 
-
   function renderMysteryWord(Array, String) {
     return String.split("")
       .map((letter) => {
@@ -30,26 +29,26 @@ function App() {
     <>
       <GlobalSyles />
       <Jogo
-        setNumerError={setNumerError}
-        numberError={numberError}
         images={Images}
         words={palavras}
+        renderMysteryWord={renderMysteryWord}
         setGame={setGame}
+        clickedButtons={clickedButtons}
+        setClickedButtons={setClickedButtons}
+        numberError={numberError}
+        setNumerError={setNumerError}
         word={word}
         setWord={setWord}
         mysteryWord={mysteryWord}
         setMysteryWord={setMysteryWord}
-        clickedButtons={clickedButtons}
-        setClickedButtons={setClickedButtons}
-        renderMysteryWord={renderMysteryWord}
-        setGameEnd={setGameEnd}
         gameEnd={gameEnd}
+        setGameEnd={setGameEnd}
       />
       <Letras
-        renderMysteryWord={renderMysteryWord}
         letters={alfabeto}
-        setGame={setGame}
+        renderMysteryWord={renderMysteryWord}
         statusGame={statusGame}
+        setGame={setGame}
         clickedButtons={clickedButtons}
         setClickedButtons={setClickedButtons}
         numberError={numberError}
@@ -60,12 +59,12 @@ function App() {
         setGameEnd={setGameEnd}
       />
       <Chute
-      word={word}
-      setNumerError={setNumerError}
-      setGame={setGame}
-      statusGame={statusGame}
-      setGameEnd={setGameEnd}
-      setMysteryWord={setMysteryWord}
+        statusGame={statusGame}
+        setGame={setGame}
+        setNumerError={setNumerError}
+        word={word}
+        setMysteryWord={setMysteryWord}
+        setGameEnd={setGameEnd}
       />
     </>
   );

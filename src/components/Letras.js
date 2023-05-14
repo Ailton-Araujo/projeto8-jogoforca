@@ -3,8 +3,9 @@ import { Letters } from "./styled/Letters.styled";
 
 export default function Letras({
   letters,
-  setGame,
+  renderMysteryWord,
   statusGame,
+  setGame,
   clickedButtons,
   setClickedButtons,
   numberError,
@@ -12,7 +13,6 @@ export default function Letras({
   word,
   mysteryWord,
   setMysteryWord,
-  renderMysteryWord,
   setGameEnd,
 }) {
   return <Letters>
@@ -21,6 +21,7 @@ export default function Letras({
         <Button
         key={letter}
           letter={letter}
+          renderMysteryWord={renderMysteryWord}
           setGame={setGame}
           statusButton={
             statusGame === true
@@ -36,7 +37,7 @@ export default function Letras({
           word={word}
           mysteryWord={mysteryWord}
           setMysteryWord={setMysteryWord}
-          renderMysteryWord={renderMysteryWord}
+          
           setGameEnd={setGameEnd}
         />
       );

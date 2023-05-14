@@ -3,6 +3,7 @@ import { ButtonLetter } from "./styled/ButtonLetter.styled";
 
 export default function Buttom({
   letter,
+  renderMysteryWord,
   setGame,
   statusButton,
   clickedButtons,
@@ -12,7 +13,6 @@ export default function Buttom({
   word,
   mysteryWord,
   setMysteryWord,
-  renderMysteryWord,
   setGameEnd,
 }) {
   function guess() {

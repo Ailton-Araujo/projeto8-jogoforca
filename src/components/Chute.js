@@ -3,12 +3,12 @@ import { remove } from "remove-accents";
 import { Guess } from "./styled/Guess.styled";
 
 export default function Chute({
-  word,
-  setNumerError,
-  setGame,
   statusGame,
-  setGameEnd,
+  setGame,
+  setNumerError,
+  word,
   setMysteryWord,
+  setGameEnd,
 }) {
   let [guessWord, setGuessWord] = useState("");
 
@@ -36,14 +36,15 @@ export default function Chute({
         onChange={(e) => setGuessWord(e.target.value)}
         value={guessWord}
         onKeyDown={(e) => {
-          if(e.key === "Enter") { checkGuess()};
+          if (e.key === "Enter") {
+            checkGuess();
+          }
         }}
         type="text"
       ></input>
       <button
         data-test="guess-button"
         disabled={statusGame === true ? statusGame : false}
-
         onClick={checkGuess}
       >
         Chutar
