@@ -9,5 +9,5 @@ export const ButtomGame = styled.button`
   font-weight: 700;
   font-size: 20px;
   line-height: 23px;
-  color: #FFFFFF;
+  color: #ffffff;
 `;

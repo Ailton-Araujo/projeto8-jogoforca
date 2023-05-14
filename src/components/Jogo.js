@@ -42,7 +42,7 @@ export default function Jogo({
         >
           Escolher Palavra
         </ButtomGame>
-        <p data-test="word">{numberError===6 ? word:mysteryWord}</p>
+        <p data-test="word">{mysteryWord}</p>
       </div>
     </Game>
   );

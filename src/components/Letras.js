@@ -1,4 +1,5 @@
 import Button from "./Button";
+import { Letters } from "./styled/Letters.styled";
 
 export default function Letras({
   letters,
@@ -12,28 +13,34 @@ export default function Letras({
   mysteryWord,
   setMysteryWord,
   renderMysteryWord,
-  setGameEnd
+  setGameEnd,
 }) {
-  return letters.map((i) => (
-    <Button data-test="letter"
-      letter={i}
-      setGame={setGame}
-      statusButton={
-        statusGame===true
-          ? statusGame
-          : clickedButtons.includes(i)
-          ? true
-          : false
-      }
-      clickedButtons={clickedButtons}
-      setClickedButtons={setClickedButtons}
-      numberError={numberError}
-      setNumerError={setNumerError}
-      word={word}
-      mysteryWord={mysteryWord}
-      setMysteryWord={setMysteryWord}
-      renderMysteryWord={renderMysteryWord}
-      setGameEnd={setGameEnd}
-    />
-  ));
+  return <Letters>
+    {letters.map((letter) => {
+      return (
+        <Button
+        key={letter}
+          data-test="letter"
+          letter={letter}
+          setGame={setGame}
+          statusButton={
+            statusGame === true
+              ? statusGame
+              : clickedButtons.includes(letter)
+              ? true
+              : false
+          }
+          clickedButtons={clickedButtons}
+          setClickedButtons={setClickedButtons}
+          numberError={numberError}
+          setNumerError={setNumerError}
+          word={word}
+          mysteryWord={mysteryWord}
+          setMysteryWord={setMysteryWord}
+          renderMysteryWord={renderMysteryWord}
+          setGameEnd={setGameEnd}
+        />
+      );
+    })}
+  </Letters>;
 }

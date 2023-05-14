@@ -18,8 +18,8 @@ function App() {
   let [gameEnd, setGameEnd] = useState("");
 
 
-  function renderMysteryWord(Array, temp) {
-    return temp.split("")
+  function renderMysteryWord(Array, String) {
+    return String.split("")
       .map((letter) => {
         return Array.includes(remove(letter)) ? letter : "_";
       })

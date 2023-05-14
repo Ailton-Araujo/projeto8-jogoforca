@@ -28,6 +28,7 @@ export default function Buttom({
     if (numberError > 5) {
       setGame(true);
       setGameEnd("#FF0000");
+      setMysteryWord(word)
     }
   }
 
