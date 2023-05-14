@@ -13,5 +13,4 @@ export const Letters = styled.div`
     justify-content: center;
     margin: 0px,15px;
 }
-
-`
+`;

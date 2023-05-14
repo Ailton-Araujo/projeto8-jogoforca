@@ -31,7 +31,11 @@ export default function Jogo({
   console.log(word, mysteryWord, clickedButtons);
   return (
     <Game gameEnd={gameEnd}>
-      <Image data-test="game-image" src={images[numberError]} />
+      <Image
+        data-test="game-image"
+        src={images[numberError]}
+        alt={images[numberError]}
+      />
       <div>
         <ButtomGame
           data-test="choose-word"

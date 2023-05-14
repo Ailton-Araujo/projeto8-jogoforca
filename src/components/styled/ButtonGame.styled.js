@@ -10,4 +10,5 @@ export const ButtomGame = styled.button`
   font-size: 20px;
   line-height: 23px;
   color: #ffffff;
+  cursor: pointer;
 `;

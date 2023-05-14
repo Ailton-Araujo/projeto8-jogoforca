@@ -11,7 +11,6 @@ export default function Chute({
   setGameEnd,
 }) {
   const [guessWord, setGuessWord] = useState("");
-
   function checkGuess() {
     if (remove(word) === remove(guessWord)) {
       setGame(true);
