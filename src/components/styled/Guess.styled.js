@@ -10,6 +10,7 @@ export const Guess = styled.div`
   gap: 15px;
 
   p {
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: 23px;

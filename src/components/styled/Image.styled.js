@@ -4,5 +4,5 @@ export const Image = styled.img`
     width: 380px;
 
     @media screen and (orientation: portrait) {}
-    max-width: 60%;
+    max-width: 55%;
 `;

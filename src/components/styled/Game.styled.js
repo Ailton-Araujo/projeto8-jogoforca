@@ -28,13 +28,12 @@ export const Game = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
-
+    padding: 10px 0px 5px;
 
     div {
       width: 90%;
       align-items: center;
-      margin: 15px, 0px, 5px;
+      margin: 15px 0px 5px;
     }
     button {
       width: 80%;
