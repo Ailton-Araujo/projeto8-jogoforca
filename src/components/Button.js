@@ -19,7 +19,7 @@ export default function Buttom({
     setClickedButtons([...clickedButtons, letter]);
     !remove(word).split("").includes(letter) && numberError++;
     setNumerError(numberError);
-    mysteryWord = renderMysteryWord([...clickedButtons, letter],word);
+    mysteryWord = renderMysteryWord([...clickedButtons, letter], word);
     setMysteryWord(mysteryWord);
     if (word === mysteryWord) {
       setGame(true);
@@ -28,12 +28,13 @@ export default function Buttom({
     if (numberError > 5) {
       setGame(true);
       setGameEnd("#FF0000");
-      setMysteryWord(word)
+      setMysteryWord(word);
     }
   }
 
   return (
-    <ButtonLetter data-test="letter"
+    <ButtonLetter
+      data-test="letter"
       disabled={statusButton === true ? statusButton : false}
       onClick={guess}
     >

@@ -20,7 +20,6 @@ export default function Letras({
       return (
         <Button
         key={letter}
-          data-test="letter"
           letter={letter}
           setGame={setGame}
           statusButton={
