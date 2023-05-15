@@ -12,7 +12,7 @@ export default function Chute({
 }) {
   const [guessWord, setGuessWord] = useState("");
   function checkGuess() {
-    if (remove(word) === remove(guessWord)) {
+    if (remove(word).toLowerCase() === remove(guessWord).toLowerCase()) {
       setGame(true);
       setGameEnd("#27AE60");
       setMysteryWord(word);

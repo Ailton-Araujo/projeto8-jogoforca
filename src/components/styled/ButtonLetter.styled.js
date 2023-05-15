@@ -19,4 +19,9 @@ export const ButtonLetter = styled.button`
     color: #798a9f;
     cursor: not-allowed;
   }
+
+  @media screen and (orientation: portrait) {
+    width: 40px;
+    height: 40px;
+  }
 `;

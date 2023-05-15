@@ -35,6 +35,12 @@ export const Game = styled.div`
       align-items: center;
       margin: 15px 0px 5px;
     }
+
+    p {
+      font-size: 45px;
+      line-height: 60px;
+    }
+
     button {
       width: 80%;
       height: 45px;
